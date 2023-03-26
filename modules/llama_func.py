@@ -134,7 +134,7 @@ def ask_ai(
         prompt_tmpl,
         refine_tmpl,
         sim_k=1,
-        temprature=0,
+        temperature=0,
         prefix_messages=None,
         reply_language="中文",
 ):
@@ -146,7 +146,7 @@ def ask_ai(
     logging.debug("Querying index...")
     llm_predictor = LLMPredictor(
         llm=OpenAI(
-            temperature=temprature,
+            temperature=temperature,
             model_name="gpt-3.5-turbo-0301",
             prefix_messages=prefix_messages,
         )
