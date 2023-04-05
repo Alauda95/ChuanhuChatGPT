@@ -61,7 +61,7 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
     history = gr.State([])
     token_count = gr.State([])
     promptTemplates = gr.State(load_template(get_template_names(plain=True)[0], mode=2))
-    user_api_key = gr.State(my_api_key)
+    user_api_key = gr.State("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")
     user_question = gr.State("")
     outputing = gr.State(False)
     topic = gr.State("未命名对话历史记录")
@@ -96,7 +96,6 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                     keyTxt = gr.Textbox(
                         show_label=True,
                         placeholder=f"OpenAI API-key...",
-                        value="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",
                         type="password",
                         visible=not HIDE_MY_KEY,
                         label="API-Key",
