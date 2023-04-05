@@ -398,7 +398,7 @@ demo.title = "川虎ChatGPT 🚀"
 
 if __name__ == "__main__":
     reload_javascript()
-    port = os.environ.get("PORT")
+    port = int(os.environ.get("PORT"))
     # if running in Docker
     if dockerflag:
         if authflag:
