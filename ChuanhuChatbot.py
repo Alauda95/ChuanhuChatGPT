@@ -398,19 +398,20 @@ demo.title = "川虎ChatGPT 🚀"
 
 if __name__ == "__main__":
     reload_javascript()
+    port = os.environ.get("PORT")
     # if running in Docker
     if dockerflag:
         if authflag:
             demo.queue(concurrency_count=CONCURRENT_COUNT).launch(
                 server_name="0.0.0.0",
-                server_port=7860,
+                server_port=port,
                 auth=(username, password),
                 favicon_path="./assets/favicon.ico",
             )
         else:
             demo.queue(concurrency_count=CONCURRENT_COUNT).launch(
                 server_name="0.0.0.0",
-                server_port=7860,
+                server_port=port,
                 share=False,
                 favicon_path="./assets/favicon.ico",
             )
