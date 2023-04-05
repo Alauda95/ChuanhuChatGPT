@@ -27,13 +27,12 @@ else:
 authflag = False
 
 if dockerflag:
-    my_api_key = os.environ.get("my_api_key")
     if my_api_key == "empty":
         logging.error("Please give a api key!")
         sys.exit(1)
     # auth
-    username = os.environ.get("USERNAME")
-    password = os.environ.get("PASSWORD")
+    username = "root"
+    password = "test1234"
     if not (isinstance(username, type(None)) or isinstance(password, type(None))):
         authflag = True
 else:
