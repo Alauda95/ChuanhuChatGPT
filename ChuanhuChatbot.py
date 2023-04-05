@@ -96,7 +96,7 @@ with gr.Blocks(css=customCSS, theme=small_and_beautiful_theme) as demo:
                     keyTxt = gr.Textbox(
                         show_label=True,
                         placeholder=f"OpenAI API-key...",
-                        value=hide_middle_chars(my_api_key),
+                        value="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",
                         type="password",
                         visible=not HIDE_MY_KEY,
                         label="API-Key",
